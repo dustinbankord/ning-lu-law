@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ning Lu Law | Estate Planning Attorney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --charcoal:   #1a1a1a;
+      --charcoal-2: #242424;
+      --charcoal-3: #2e2e2e;
+      --gold:       #c9a96e;
+      --gold-light: #dfc18e;
+      --gold-dark:  #a8844e;
+      --off-white:  #f5f3ef;
+      --text-light: #d4cfc8;
+      --text-muted: #8a847c;
+      --white:      #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--off-white);
+      color: var(--charcoal);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.15;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ─── Navigation ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(26, 26, 26, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+      padding: 0 40px;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-icon {
+      width: 42px;
+      height: 42px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--gold);
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-logo-text span:first-child {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+
+    .nav-logo-text span:last-child {
+      font-size: 0.65rem;
+      color: var(--gold);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      transition: color 0.25s;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-phone {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--charcoal);
+      padding: 11px 26px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s;
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      padding: 13px 32px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s;
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      background: var(--charcoal);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 76px;
+    }
+
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 65% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 70%),
+        linear-gradient(135deg, rgba(201,169,110,0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Decorative vertical line */
+    .hero-bg-pattern::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      right: 42%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.2), transparent);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-eyebrow span {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 40px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(201, 169, 110, 0.15);
+    }
+
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Hero photo side */
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo-frame {
+      position: relative;
+      width: 100%;
+      max-width: 460px;
+    }
+
+    .hero-photo-frame::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      bottom: 20px;
+      left: 20px;
+      border: 1px solid rgba(201, 169, 110, 0.25);
+      pointer-events: none;
+    }
+
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      background: var(--charcoal-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 32px;
+      left: -32px;
+      background: var(--charcoal-2);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hero-badge-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(201, 169, 110, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero-badge-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--gold);
+    }
+
+    .hero-badge-text strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+
+    .hero-badge-text span {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── Trust Bar ─── */
+    .trust-bar {
+      background: var(--charcoal-2);
+      border-top: 1px solid rgba(201, 169, 110, 0.15);
+      border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+      padding: 48px 40px;
+    }
+
+    .trust-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 0 40px;
+      border-right: 1px solid rgba(201, 169, 110, 0.12);
+    }
+
+    .trust-item:first-child { padding-left: 0; }
+    .trust-item:last-child { padding-right: 0; border-right: none; }
+
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .trust-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--gold);
+    }
+
+    .trust-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .trust-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── About ─── */
+    .about {
+      padding: 120px 40px;
+      background: var(--off-white);
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+    }
+
+    .about-photo-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      width: 60%;
+      height: 50%;
+      border: 2px solid var(--gold);
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-credential {
+      position: absolute;
+      top: 40px;
+      left: -28px;
+      background: var(--charcoal);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .about-credential strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .about-credential span {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .about-content {}
+
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-eyebrow span {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--gold-dark);
+    }
+
+    .section-title.light { color: var(--white); }
+    .section-title.light em { color: var(--gold); }
+
+    .about-bio {
+      font-size: 0.95rem;
+      color: #5a5450;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 32px 0;
+    }
+
+    .about-highlight {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--charcoal);
+    }
+
+    .about-highlight::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ─── Services ─── */
+    .services {
+      background: var(--charcoal);
+      padding: 120px 40px;
+      position: relative;
+    }
+
+    .services-bg {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(201,169,110,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .services-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .services-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      gap: 40px;
+    }
+
+    .services-header-left { max-width: 540px; }
+
+    .services-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .service-card {
+      background: var(--charcoal-2);
+      padding: 44px 36px;
+      border-top: 2px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+      cursor: default;
+    }
+
+    .service-card:hover {
+      border-top-color: var(--gold);
+      background: var(--charcoal-3);
+    }
+
+    .service-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: rgba(201, 169, 110, 0.12);
+      line-height: 1;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 20px;
+    }
+
+    .service-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--gold);
+      opacity: 0.8;
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      transition: gap 0.2s;
+    }
+
+    .service-card:hover .service-link { gap: 12px; }
+
+    /* ─── Why Choose ─── */
+    .why {
+      background: var(--off-white);
+      padding: 120px 40px;
+    }
+
+    .why-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .why-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 64px;
+    }
+
+    .why-header .section-eyebrow {
+      justify-content: center;
+    }
+
+    .why-header .section-eyebrow::before { display: none; }
+
+    .why-header .section-eyebrow::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 40px 24px;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      background: var(--white);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .why-item:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
+
+    .why-icon-wrap {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .why-icon-wrap svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--gold-dark);
+    }
+
+    .why-item h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+
+    .why-item p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── Testimonials ─── */
+    .testimonials {
+      background: var(--charcoal);
+      padding: 120px 40px;
+      position: relative;
+    }
+
+    .testimonials-bg {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(ellipse 50% 60% at 20% 50%, rgba(201,169,110,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .testimonials-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .testimonials-header .section-eyebrow {
+      justify-content: center;
+    }
+
+    .testimonials-header .section-eyebrow::before { display: none; }
+    .testimonials-header .section-eyebrow::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .testimonial-card {
+      background: var(--charcoal-2);
+      padding: 44px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 4px;
+    }
+
+    .testimonial-stars span {
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-light);
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .testimonial-quote::before {
+      content: '\201C';
+      font-size: 2rem;
+      color: var(--gold);
+      line-height: 0;
+      vertical-align: -0.4em;
+      margin-right: 4px;
+    }
+
+    .testimonial-author {
+      border-top: 1px solid rgba(201,169,110,0.12);
+      padding-top: 20px;
+    }
+
+    .testimonial-author strong {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+
+    .testimonial-author span {
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 1024px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── CTA Banner ─── */
+    .cta-banner {
+      background: var(--charcoal-2);
+      padding: 80px 40px;
+      border-top: 1px solid rgba(201,169,110,0.15);
+      border-bottom: 1px solid rgba(201,169,110,0.15);
+    }
+
+    .cta-banner-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--white);
+    }
+
+    .cta-banner h2 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .cta-banner p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .cta-banner-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+
+    /* ─── Contact ─── */
+    .contact {
+      background: var(--off-white);
+      padding: 120px 40px;
+    }
+
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 16px;
+    }
+
+    .contact-info p {
+      font-size: 0.9rem;
+      color: #5a5450;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .contact-detail-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--charcoal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-detail-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--gold);
+    }
+
+    .contact-detail-text strong {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 2px;
+    }
+
+    .contact-detail-text span {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: var(--white);
+      padding: 48px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+    }
+
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    .form-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(0,0,0,0.12);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      background: var(--off-white);
+      outline: none;
+      transition: border-color 0.25s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-group textarea {
+      height: 110px;
+      resize: none;
+    }
+
+    .form-group select {
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 15px;
+      background: var(--charcoal);
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: var(--charcoal-3);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--charcoal);
+      padding: 60px 40px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(201,169,110,0.12);
+    }
+
+    .footer-brand p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-top: 16px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+
+    .footer-col ul li a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      gap: 20px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .footer-disclaimer {
+      font-size: 0.72rem;
+      color: rgba(138, 132, 124, 0.6);
+      max-width: 500px;
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 60px; text-align: center; }
+      .hero-eyebrow, .hero-actions, .hero-stats { justify-content: center; }
+      .hero-desc { margin: 0 auto 40px; }
+      .hero-visual { display: none; }
+      .about-inner { grid-template-columns: 1fr; gap: 60px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .cta-banner-inner { flex-direction: column; text-align: center; }
+      .cta-banner-actions { justify-content: center; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 20px; }
+      .nav-links, .nav-phone { display: none; }
+      .container, .hero-inner, .about, .services, .why, .contact, footer,
+      .trust-bar, .cta-banner { padding-left: 20px; padding-right: 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .trust-bar-inner { grid-template-columns: 1fr; gap: 24px; }
+      .trust-item { border-right: none; padding: 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form { padding: 28px 20px; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-disclaimer { text-align: center; }
+      .services-header { flex-direction: column; align-items: flex-start; }
+      .hero-stats { flex-direction: column; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav>
+    <div class="nav-logo">
+      <!-- Double-ring NL monogram -->
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <circle cx="23" cy="23" r="21.5" stroke="#c9a96e" stroke-width="0.9"/>
+        <circle cx="23" cy="23" r="17.5" stroke="#c9a96e" stroke-width="0.9"/>
+        <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle"
+              font-family="'Cormorant Garamond', Georgia, serif"
+              font-size="17" font-weight="600" fill="white" letter-spacing="1">NL</text>
+      </svg>
+      <div class="nav-logo-text">
+        <span>Ning Lu Law</span>
+        <span>Estate Planning Attorney</span>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <span class="nav-phone">(XXX) XXX-XXXX</span>
+      <a href="#contact" class="btn-primary">Free Consultation</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Hero ═══ -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span>Estate Planning Attorney</span>
+        </div>
+        <h1>Protecting Your<br /><em>Legacy</em> &amp;<br />Your Family</h1>
+        <p class="hero-desc">
+          Thoughtful, personalized estate planning designed to give you peace of mind.
+          Wills, trusts, and powers of attorney tailored to your life and your wishes.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Schedule a Consultation</a>
+          <a href="#services" class="btn-outline">Our Services</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">500+</div>
+            <div class="hero-stat-label">Families Served</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">15+</div>
+            <div class="hero-stat-label">Years of Experience</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label">Client Focused</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo-frame">
+          <img class="photo-placeholder" src="images/hero-family.jpg" alt="Ning Lu and family" />
+          <div class="hero-badge">
+            <div class="hero-badge-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            </div>
+            <div class="hero-badge-text">
+              <strong>Licensed &amp; Trusted</strong>
+              <span>State Bar Member</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Trust Bar ═══ -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.4-1.4 1.6 1.6 4.6-4.6L17 9l-6 6z"/></svg>
+        </div>
+        <div class="trust-text">
+          <h3>Personalized Approach</h3>
+          <p>Every estate plan is crafted around your unique family, goals, and circumstances.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm6 12H6v-.6c0-2 4-3.1 6-3.1s6 1.1 6 3.1V18z"/></svg>
+        </div>
+        <div class="trust-text">
+          <h3>Direct Attorney Access</h3>
+          <p>Work one-on-one with Ning Lu — not a paralegal or assistant — from start to finish.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="trust-text">
+          <h3>Clear, Flat-Fee Pricing</h3>
+          <p>Transparent pricing with no surprise billing — you know the cost before we begin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ About ═══ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual">
+        <div class="about-photo-wrap">
+          <img class="about-photo" src="images/headshots/replicate-prediction-kjyw1zdmbxrmt0cyz8et151dn4.jpeg" alt="Ning Lu, Estate Planning Attorney" />
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-eyebrow"><span>About Ning Lu</span></div>
+        <h2 class="section-title">An Attorney Who<br />Listens &amp; <em>Understands</em></h2>
+
+        <p class="about-bio">
+          Ning Lu is an estate planning attorney and a father — which means he understands firsthand
+          why protecting your family's future matters. He founded Ning Lu Law to provide families with
+          the kind of thoughtful, personalized legal counsel that makes a real difference.
+        </p>
+        <p class="about-bio">
+          Whether you're building a simple will, establishing a living trust, or planning for the unexpected,
+          Ning will walk you through every step in plain language — no legal jargon, no confusion.
+        </p>
+
+        <div class="about-highlights">
+          <div class="about-highlight">Wills &amp; Living Trusts</div>
+          <div class="about-highlight">Powers of Attorney</div>
+          <div class="about-highlight">Healthcare Directives</div>
+          <div class="about-highlight">Probate Administration</div>
+          <div class="about-highlight">Trust Administration</div>
+          <div class="about-highlight">Business Succession</div>
+        </div>
+
+        <a href="#contact" class="btn-primary">Schedule a Free Consult</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Services ═══ -->
+  <section class="services" id="services">
+    <div class="services-bg"></div>
+    <div class="services-inner">
+      <div class="services-header">
+        <div class="services-header-left">
+          <div class="section-eyebrow" style="margin-bottom:16px;">
+            <span style="font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:14px;">
+              <span style="display:block;width:28px;height:1px;background:var(--gold);"></span>
+              Practice Areas
+            </span>
+          </div>
+          <h2 class="section-title light">Estate Planning<br /><em>Services</em></h2>
+        </div>
+        <p class="services-subtitle">
+          Comprehensive estate planning solutions to protect your assets,
+          provide for your loved ones, and preserve your legacy.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <h3>Wills &amp; Testaments</h3>
+          <p>A legally sound will ensures your assets go to the people you choose and your wishes are honored — avoiding costly probate disputes.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <h3>Living Trusts</h3>
+          <p>Revocable and irrevocable trusts that protect your estate from probate, maintain privacy, and provide for seamless transfer to your heirs.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <h3>Powers of Attorney</h3>
+          <p>Designate someone you trust to make financial and legal decisions on your behalf if you become incapacitated.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <h3>Healthcare Directives</h3>
+          <p>Advance healthcare directives and living wills that clearly document your medical wishes, protecting you and your family.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-num">05</div>
+          <h3>Probate Administration</h3>
+          <p>Guiding families through the probate process with clarity and efficiency, minimizing cost and stress during a difficult time.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card">
+          <div class="service-num">06</div>
+          <h3>Business Succession</h3>
+          <p>Protect the business you've built with a succession plan that ensures smooth ownership transition and protects your partners and family.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Why Choose ═══ -->
+  <section class="why">
+    <div class="why-inner">
+      <div class="why-header">
+        <div class="section-eyebrow"><span>Why Ning Lu Law</span></div>
+        <h2 class="section-title">The Difference<br /><em>Experience</em> Makes</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <h4>Peace of Mind</h4>
+          <p>Know your family is protected, no matter what happens.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+          </div>
+          <h4>Plain Language</h4>
+          <p>Complex legal concepts explained clearly — no jargon.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+          </div>
+          <h4>Trusted Reputation</h4>
+          <p>Hundreds of families have trusted Ning with their most important decisions.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+          </div>
+          <h4>Responsive &amp; Available</h4>
+          <p>Timely communication and flexible scheduling around your life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Testimonials ═══ -->
+  <section class="testimonials">
+    <div class="testimonials-bg"></div>
+    <div class="testimonials-inner">
+      <div class="testimonials-header">
+        <div class="section-eyebrow"><span>Client Testimonials</span></div>
+        <h2 class="section-title light">What Families Are<br /><em>Saying</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            Ning made what felt like an overwhelming process completely manageable. He explained everything clearly, never rushed us, and we left feeling confident our family is protected. We couldn't recommend him more highly.
+          </p>
+          <div class="testimonial-author">
+            <strong>[Client Name]</strong>
+            <span>Will &amp; Living Trust</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            After the birth of our second child, we knew we needed to get our affairs in order. Ning walked us through every option and put together a plan that gave us real peace of mind. Truly a pleasure to work with.
+          </p>
+          <div class="testimonial-author">
+            <strong>[Client Name]</strong>
+            <span>Estate Plan &amp; Powers of Attorney</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            I was referred to Ning by a close friend and I understand why. He's thorough, thoughtful, and genuinely cares about his clients. Our trust is set up exactly the way we wanted, and the process was seamless.
+          </p>
+          <div class="testimonial-author">
+            <strong>[Client Name]</strong>
+            <span>Revocable Living Trust</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA Banner ═══ -->
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <div>
+        <h2>Ready to Protect<br /><em>Your Family's Future?</em></h2>
+        <p>Schedule a free consultation — no obligation, no pressure.</p>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+        <a href="tel:XXXXXXXXXX" class="btn-outline">(XXX) XXX-XXXX</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Contact ═══ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="section-eyebrow"><span>Get in Touch</span></div>
+        <h2 class="section-title">Let's Talk About<br /><em>Your Estate Plan</em></h2>
+        <p>
+          Your first consultation is free. Reach out today and let's start building
+          a plan that protects everything you've worked for.
+        </p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Phone</strong>
+              <span>(XXX) XXX-XXXX</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <span>ning@ninglulawfirm.com</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Office</strong>
+              <span>[Street Address]<br />[City, State ZIP]</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Office Hours</strong>
+              <span>Mon–Fri: 9am – 6pm<br />Evenings &amp; weekends by appointment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-title">Request a Free Consultation</div>
+        <div class="form-subtitle">We'll respond within one business day.</div>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(XXX) XXX-XXXX" />
+          </div>
+          <div class="form-group">
+            <label>I'm interested in</label>
+            <select>
+              <option value="" disabled selected>Select a service…</option>
+              <option>Will / Testament</option>
+              <option>Living Trust</option>
+              <option>Power of Attorney</option>
+              <option>Healthcare Directive</option>
+              <option>Probate Administration</option>
+              <option>Business Succession</option>
+              <option>Not sure — I need guidance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message (optional)</label>
+            <textarea placeholder="Tell us a little about your situation…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send My Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+              <circle cx="23" cy="23" r="21.5" stroke="#c9a96e" stroke-width="0.9"/>
+              <circle cx="23" cy="23" r="17.5" stroke="#c9a96e" stroke-width="0.9"/>
+              <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle"
+                    font-family="'Cormorant Garamond', Georgia, serif"
+                    font-size="17" font-weight="600" fill="white" letter-spacing="1">NL</text>
+            </svg>
+            <div class="nav-logo-text">
+              <span>Ning Lu Law</span>
+              <span>Estate Planning Attorney</span>
+            </div>
+          </div>
+          <p>Helping families plan, protect, and preserve their legacy with clarity and care.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Wills &amp; Testaments</a></li>
+            <li><a href="#services">Living Trusts</a></li>
+            <li><a href="#services">Powers of Attorney</a></li>
+            <li><a href="#services">Healthcare Directives</a></li>
+            <li><a href="#services">Probate</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Firm</h4>
+          <ul>
+            <li><a href="#about">About Ning</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Free Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:XXXXXXXXXX">(XXX) XXX-XXXX</a></li>
+            <li><a href="mailto:ning@ninglulawfirm.com">ning@ninglulawfirm.com</a></li>
+            <li><a href="#contact">[City, State]</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ning Lu Law. All rights reserved.</p>
+        <p class="footer-disclaimer">
+          The information on this website is for general informational purposes only and does not constitute legal advice.
+          Viewing this site does not create an attorney-client relationship.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
