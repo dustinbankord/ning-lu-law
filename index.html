@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Review build: keep out of search results until final launch -->
+  <meta name="robots" content="noindex, nofollow" />
   <title>Ning Lu Law | Estate Planning</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -183,7 +185,7 @@
     /* ─── Hero ─── */
     .hero {
       background: var(--charcoal);
-      min-height: 100vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       position: relative;
@@ -219,7 +221,7 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 80px 40px;
+      padding: 40px 40px;
     }
 
     .hero-content {
@@ -281,8 +283,8 @@
     .hero-stats {
       display: flex;
       gap: 40px;
-      margin-top: 56px;
-      padding-top: 40px;
+      margin-top: 40px;
+      padding-top: 32px;
       border-top: 1px solid rgba(201, 169, 110, 0.15);
     }
 
@@ -449,6 +451,11 @@
     .about {
       padding: 120px 40px;
       background: var(--off-white);
+      position: relative;
+      z-index: 4;
+      margin-top: -40px;
+      padding-top: 160px;
+      box-shadow: 0 -30px 60px rgba(0, 0, 0, 0.18);
     }
 
     .about-inner {
@@ -1216,7 +1223,7 @@
   <section class="hero">
     <div class="hero-bg-pattern"></div>
     <div class="hero-inner">
-      <div class="hero-content">
+      <div class="hero-content" data-parallax="0.04">
         <div class="hero-eyebrow">
           <span>Estate Planning</span>
         </div>
@@ -1246,9 +1253,9 @@
       </div>
 
       <div class="hero-visual">
-        <div class="hero-photo-frame">
+        <div class="hero-photo-frame" data-parallax="-0.05">
           <img class="photo-placeholder" src="images/hero-family.jpg" alt="Ning Lu and family" />
-          <div class="hero-badge">
+          <div class="hero-badge" data-parallax="0.16">
             <div class="hero-badge-icon">
               <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
             </div>
@@ -1280,7 +1287,7 @@
         </div>
         <div class="trust-text">
           <h3>Direct Attorney Access</h3>
-          <p>Work one-on-one with Ning Lu — not a paralegal or assistant — from start to finish.</p>
+          <p>Work one-on-one with Ning Lu, not a paralegal or assistant, from start to finish.</p>
         </div>
       </div>
       <div class="trust-item">
@@ -1289,7 +1296,7 @@
         </div>
         <div class="trust-text">
           <h3>Clear, Flat-Fee Pricing</h3>
-          <p>Transparent pricing with no surprise billing — you know the cost before we begin.</p>
+          <p>Transparent pricing with no surprise billing. You know the cost before we begin.</p>
         </div>
       </div>
     </div>
@@ -1299,23 +1306,23 @@
   <section class="about" id="about">
     <div class="about-inner">
       <div class="about-visual">
-        <div class="about-photo-wrap">
+        <div class="about-photo-wrap" data-parallax="-0.06">
           <img class="about-photo" src="images/headshots/replicate-prediction-kjyw1zdmbxrmt0cyz8et151dn4.jpeg" alt="Ning Lu, Estate Planning" />
         </div>
       </div>
 
-      <div class="about-content">
+      <div class="about-content" data-parallax="0.03">
         <div class="section-eyebrow"><span>About Ning Lu</span></div>
         <h2 class="section-title">An Attorney Who<br />Listens &amp; <em>Understands</em></h2>
 
         <p class="about-bio">
-          Ning Lu is an estate planning attorney and a father — which means he understands firsthand
+          Ning Lu is an estate planning attorney and a father, which means he understands firsthand
           why protecting your family's future matters. He founded Ning Lu Law to provide families with
           the kind of thoughtful, personalized legal counsel that makes a real difference.
         </p>
         <p class="about-bio">
           Whether you're building a simple will, establishing a living trust, or planning for the unexpected,
-          Ning will walk you through every step in plain language — no legal jargon, no confusion.
+          Ning will walk you through every step in plain language, with no legal jargon and no confusion.
         </p>
 
         <div class="about-highlights">
@@ -1337,13 +1344,8 @@
     <div class="services-bg"></div>
     <div class="services-inner">
       <div class="services-header">
-        <div class="services-header-left">
-          <div class="section-eyebrow" style="margin-bottom:16px;">
-            <span style="font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:14px;">
-              <span style="display:block;width:28px;height:1px;background:var(--gold);"></span>
-              Practice Areas
-            </span>
-          </div>
+        <div class="services-header-left" data-parallax="0.04">
+          <div class="section-eyebrow"><span>Practice Areas</span></div>
           <h2 class="section-title light">Estate Planning<br /><em>Services</em></h2>
         </div>
         <p class="services-subtitle">
@@ -1356,7 +1358,7 @@
         <div class="service-card">
           <div class="service-num">01</div>
           <h3>Wills &amp; Testaments</h3>
-          <p>A legally sound will ensures your assets go to the people you choose and your wishes are honored — avoiding costly probate disputes.</p>
+          <p>A legally sound will ensures your assets go to the people you choose and your wishes are honored, avoiding costly probate disputes.</p>
           <span class="service-link">Learn more →</span>
         </div>
         <div class="service-card">
@@ -1396,7 +1398,7 @@
   <!-- ═══ Why Choose ═══ -->
   <section class="why">
     <div class="why-inner">
-      <div class="why-header">
+      <div class="why-header" data-parallax="0.04">
         <div class="section-eyebrow"><span>Why Ning Lu Law</span></div>
         <h2 class="section-title">The Difference<br /><em>Experience</em> Makes</h2>
       </div>
@@ -1413,7 +1415,7 @@
             <svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
           </div>
           <h4>Plain Language</h4>
-          <p>Complex legal concepts explained clearly — no jargon.</p>
+          <p>Complex legal concepts explained clearly, without the jargon.</p>
         </div>
         <div class="why-item">
           <div class="why-icon-wrap">
@@ -1437,9 +1439,9 @@
   <section class="testimonials">
     <div class="testimonials-bg"></div>
     <div class="testimonials-inner">
-      <div class="testimonials-header">
+      <div class="testimonials-header" data-parallax="0.04">
         <div class="section-eyebrow"><span>Client Testimonials</span></div>
-        <h2 class="section-title light">What Families Are<br /><em>Saying</em></h2>
+        <h2 class="section-title light">What Families Are <em>Saying</em></h2>
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card">
@@ -1447,11 +1449,10 @@
             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
           </div>
           <p class="testimonial-quote">
-            Ning made what felt like an overwhelming process completely manageable. He explained everything clearly, never rushed us, and we left feeling confident our family is protected. We couldn't recommend him more highly.
+            Just saying "thank you" doesn't seem enough. Thank you so much for everything you've done for us. We really appreciate your help. Millions of blessings for you and your family.
           </p>
           <div class="testimonial-author">
-            <strong>[Client Name]</strong>
-            <span>Will &amp; Living Trust</span>
+            <strong>Eslym &amp; Ken W.</strong>
           </div>
         </div>
         <div class="testimonial-card">
@@ -1459,11 +1460,10 @@
             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
           </div>
           <p class="testimonial-quote">
-            After the birth of our second child, we knew we needed to get our affairs in order. Ning walked us through every option and put together a plan that gave us real peace of mind. Truly a pleasure to work with.
+            You are a true blessing in our lives, and you've shown us that lawyers can be trusted. You did a fantastic job. You are awesome!
           </p>
           <div class="testimonial-author">
-            <strong>[Client Name]</strong>
-            <span>Estate Plan &amp; Powers of Attorney</span>
+            <strong>The Medina Family</strong>
           </div>
         </div>
         <div class="testimonial-card">
@@ -1471,11 +1471,43 @@
             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
           </div>
           <p class="testimonial-quote">
-            I was referred to Ning by a close friend and I understand why. He's thorough, thoughtful, and genuinely cares about his clients. Our trust is set up exactly the way we wanted, and the process was seamless.
+            Thank you so much, you and your team are amazing. They don't make people like you every day. We now have hope!
           </p>
           <div class="testimonial-author">
-            <strong>[Client Name]</strong>
-            <span>Revocable Living Trust</span>
+            <strong>The Castro Family</strong>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            Thank you again for all you have done for my family and me. We are truly grateful, and wish you nothing but the best.
+          </p>
+          <div class="testimonial-author">
+            <strong>Sam &amp; Tammi</strong>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            Thank you again for saving our lives. You did your very best to keep me from stressing out, and for that I am eternally thankful.
+          </p>
+          <div class="testimonial-author">
+            <strong>Melissa C.</strong>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            My gratitude to you is boundless. There is no way I can ever thank you enough. You saved the quality of my life. You are a miracle worker.
+          </p>
+          <div class="testimonial-author">
+            <strong>Ulla L.</strong>
           </div>
         </div>
       </div>
@@ -1485,9 +1517,9 @@
   <!-- ═══ CTA Banner ═══ -->
   <div class="cta-banner">
     <div class="cta-banner-inner">
-      <div>
+      <div data-parallax="0.05">
         <h2>Ready to Protect<br /><em>Your Family's Future?</em></h2>
-        <p>Schedule a free consultation — no obligation, no pressure.</p>
+        <p>Schedule a free consultation. No obligation, no pressure.</p>
       </div>
       <div class="cta-banner-actions">
         <a href="#contact" class="btn-primary">Book a Free Consultation</a>
@@ -1499,7 +1531,7 @@
   <!-- ═══ Contact ═══ -->
   <section class="contact" id="contact">
     <div class="contact-inner">
-      <div class="contact-info">
+      <div class="contact-info" data-parallax="0.03">
         <div class="section-eyebrow"><span>Get in Touch</span></div>
         <h2 class="section-title">Let's Talk About<br /><em>Your Estate Plan</em></h2>
         <p>
@@ -1522,7 +1554,7 @@
             </div>
             <div class="contact-detail-text">
               <strong>Email</strong>
-              <span>ning@ninglulawfirm.com</span>
+              <span>Ning@NingLuLaw.com</span>
             </div>
           </div>
           <div class="contact-detail">
@@ -1531,7 +1563,7 @@
             </div>
             <div class="contact-detail-text">
               <strong>Office</strong>
-              <span>[Street Address]<br />[City, State ZIP]</span>
+              <span>100 Enterprise Way, STE D-3058<br />Scotts Valley, CA 95066</span>
             </div>
           </div>
           <div class="contact-detail">
@@ -1539,8 +1571,8 @@
               <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
             </div>
             <div class="contact-detail-text">
-              <strong>Office Hours</strong>
-              <span>Mon–Fri: 9am – 6pm<br />Evenings &amp; weekends by appointment</span>
+              <strong>Availability</strong>
+              <span>By appointment only<br />Virtual &amp; in-person consultations available</span>
             </div>
           </div>
         </div>
@@ -1578,7 +1610,7 @@
               <option>Healthcare Directive</option>
               <option>Probate Administration</option>
               <option>Business Succession</option>
-              <option>Not sure — I need guidance</option>
+              <option>Not sure, I need guidance</option>
             </select>
           </div>
           <div class="form-group">
@@ -1633,8 +1665,8 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="tel:XXXXXXXXXX">(XXX) XXX-XXXX</a></li>
-            <li><a href="mailto:ning@ninglulawfirm.com">ning@ninglulawfirm.com</a></li>
-            <li><a href="#contact">[City, State]</a></li>
+            <li><a href="mailto:Ning@NingLuLaw.com">Ning@NingLuLaw.com</a></li>
+            <li><a href="#contact">Scotts Valley, CA</a></li>
           </ul>
         </div>
       </div>
@@ -1647,6 +1679,43 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═══ Scroll Parallax ═══ -->
+  <script>
+    (function () {
+      var motionOK = !window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+      if (!motionOK || !els.length) return;
+
+      var vh = window.innerHeight;
+      var ticking = false;
+
+      function render() {
+        ticking = false;
+        var mid = vh / 2;
+        for (var i = 0; i < els.length; i++) {
+          var el = els[i];
+          var speed = parseFloat(el.getAttribute('data-parallax')) || 0;
+          var rect = el.getBoundingClientRect();
+          var center = rect.top + rect.height / 2;
+          var shift = (center - mid) * speed;
+          el.style.transform = 'translate3d(0,' + shift.toFixed(2) + 'px,0)';
+          el.style.willChange = 'transform';
+        }
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(render);
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function () { vh = window.innerHeight; render(); });
+      render();
+    })();
+  </script>
 
 </body>
 </html>
