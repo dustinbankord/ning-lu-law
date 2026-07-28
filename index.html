@@ -639,7 +639,7 @@
       padding: 44px 36px;
       border-top: 2px solid transparent;
       transition: border-color 0.3s, background 0.3s;
-      cursor: default;
+      cursor: pointer;
     }
 
     .service-card:hover {
@@ -1785,16 +1785,19 @@
   <!-- ═══ Service Card Accordions ═══ -->
   <script>
     (function () {
-      var links = document.querySelectorAll('.service-link');
-      for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', function () {
-          var card = this.closest('.service-card');
-          if (!card) return;
-          var open = card.classList.toggle('open');
-          this.setAttribute('aria-expanded', open ? 'true' : 'false');
-          var label = this.querySelector('.service-link-label');
-          if (label) label.textContent = open ? 'Show less' : 'Learn more';
-        });
+      var cards = document.querySelectorAll('.service-card');
+      for (var i = 0; i < cards.length; i++) {
+        (function (card) {
+          var btn = card.querySelector('.service-link');
+          card.addEventListener('click', function () {
+            var open = card.classList.toggle('open');
+            if (btn) {
+              btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+              var label = btn.querySelector('.service-link-label');
+              if (label) label.textContent = open ? 'Show less' : 'Learn more';
+            }
+          });
+        })(cards[i]);
       }
     })();
   </script>
