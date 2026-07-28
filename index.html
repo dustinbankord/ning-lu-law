@@ -693,9 +693,38 @@
       color: var(--gold);
       font-weight: 500;
       transition: gap 0.2s;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
     }
 
     .service-card:hover .service-link { gap: 12px; }
+
+    .service-link-arrow { transition: transform 0.3s; }
+    .service-card.open .service-link-arrow { transform: rotate(90deg); }
+
+    .service-detail {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.45s ease, opacity 0.35s ease;
+    }
+
+    .service-card.open .service-detail {
+      max-height: 360px;
+      opacity: 1;
+    }
+
+    .service-detail p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(201, 169, 110, 0.12);
+    }
 
     /* ─── Why Choose ─── */
     .why {
@@ -1359,37 +1388,73 @@
           <div class="service-num">01</div>
           <h3>Wills &amp; Testaments</h3>
           <p>A legally sound will ensures your assets go to the people you choose and your wishes are honored, avoiding costly probate disputes.</p>
-          <span class="service-link">Learn more →</span>
+          <div class="service-detail">
+            <p>Your will is the foundation of any estate plan. We'll draft a clear, legally valid will that names guardians for minor children, appoints an executor you trust, and spells out how your assets should be distributed, so your family isn't left guessing. We also review and update existing wills after major life changes like marriage, divorce, or a new child.</p>
+          </div>
+          <button class="service-link" type="button" aria-expanded="false">
+            <span class="service-link-label">Learn more</span>
+            <span class="service-link-arrow">→</span>
+          </button>
         </div>
         <div class="service-card">
           <div class="service-num">02</div>
           <h3>Living Trusts</h3>
           <p>Revocable and irrevocable trusts that protect your estate from probate, maintain privacy, and provide for seamless transfer to your heirs.</p>
-          <span class="service-link">Learn more →</span>
+          <div class="service-detail">
+            <p>A living trust lets your estate pass to your heirs without the delay, cost, and public record of probate. We'll help you choose between a revocable trust, which you can change during your lifetime, and an irrevocable trust, which offers stronger asset protection, then make sure it's funded properly and coordinated with the rest of your plan.</p>
+          </div>
+          <button class="service-link" type="button" aria-expanded="false">
+            <span class="service-link-label">Learn more</span>
+            <span class="service-link-arrow">→</span>
+          </button>
         </div>
         <div class="service-card">
           <div class="service-num">03</div>
           <h3>Powers of Attorney</h3>
           <p>Designate someone you trust to make financial and legal decisions on your behalf if you become incapacitated.</p>
-          <span class="service-link">Learn more →</span>
+          <div class="service-detail">
+            <p>A durable power of attorney names someone you trust to manage your finances and legal affairs if you're ever unable to. We'll tailor the scope to your comfort level, whether broad or limited, and make sure it meets California's requirements so banks and institutions honor it without a fight.</p>
+          </div>
+          <button class="service-link" type="button" aria-expanded="false">
+            <span class="service-link-label">Learn more</span>
+            <span class="service-link-arrow">→</span>
+          </button>
         </div>
         <div class="service-card">
           <div class="service-num">04</div>
           <h3>Healthcare Directives</h3>
           <p>Advance healthcare directives and living wills that clearly document your medical wishes, protecting you and your family.</p>
-          <span class="service-link">Learn more →</span>
+          <div class="service-detail">
+            <p>An advance healthcare directive puts your medical wishes in writing and names an agent to speak for you if you can't. We'll walk through the decisions that matter most, from treatment preferences to end-of-life care, so your loved ones are never forced to guess during an emergency.</p>
+          </div>
+          <button class="service-link" type="button" aria-expanded="false">
+            <span class="service-link-label">Learn more</span>
+            <span class="service-link-arrow">→</span>
+          </button>
         </div>
         <div class="service-card">
           <div class="service-num">05</div>
           <h3>Probate Administration</h3>
           <p>Guiding families through the probate process with clarity and efficiency, minimizing cost and stress during a difficult time.</p>
-          <span class="service-link">Learn more →</span>
+          <div class="service-detail">
+            <p>When a loved one passes without a trust, their estate often has to go through probate. We guide executors and families through each step: filing with the court, notifying creditors, valuing assets, and distributing the estate. We handle the paperwork and deadlines so you can focus on what matters.</p>
+          </div>
+          <button class="service-link" type="button" aria-expanded="false">
+            <span class="service-link-label">Learn more</span>
+            <span class="service-link-arrow">→</span>
+          </button>
         </div>
         <div class="service-card">
           <div class="service-num">06</div>
           <h3>Business Succession</h3>
           <p>Protect the business you've built with a succession plan that ensures smooth ownership transition and protects your partners and family.</p>
-          <span class="service-link">Learn more →</span>
+          <div class="service-detail">
+            <p>The business you've built deserves a plan for what comes next. We help owners structure buy-sell agreements, plan the transfer of ownership to family or partners, and integrate the business into your overall estate plan, protecting both your company and the people who depend on it.</p>
+          </div>
+          <button class="service-link" type="button" aria-expanded="false">
+            <span class="service-link-label">Learn more</span>
+            <span class="service-link-arrow">→</span>
+          </button>
         </div>
       </div>
     </div>
@@ -1714,6 +1779,23 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       window.addEventListener('resize', function () { vh = window.innerHeight; render(); });
       render();
+    })();
+  </script>
+
+  <!-- ═══ Service Card Accordions ═══ -->
+  <script>
+    (function () {
+      var links = document.querySelectorAll('.service-link');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function () {
+          var card = this.closest('.service-card');
+          if (!card) return;
+          var open = card.classList.toggle('open');
+          this.setAttribute('aria-expanded', open ? 'true' : 'false');
+          var label = this.querySelector('.service-link-label');
+          if (label) label.textContent = open ? 'Show less' : 'Learn more';
+        });
+      }
     })();
   </script>
 
