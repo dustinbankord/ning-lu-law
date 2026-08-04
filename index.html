@@ -1210,7 +1210,19 @@
       .footer-bottom { flex-direction: column; text-align: center; }
       .footer-disclaimer { text-align: center; }
       .services-header { flex-direction: column; align-items: flex-start; }
-      .hero-stats { flex-direction: column; gap: 24px; }
+
+      /* Compact hero for small screens */
+      .nav-cta .btn-primary { padding: 9px 14px; font-size: 0.62rem; letter-spacing: 0.08em; }
+      .hero h1 { font-size: 2rem; text-wrap: balance; }
+      .hero h1 br { display: none; }
+      .hero-bg-pattern::after { display: none; }
+      .hero-stats { flex-direction: row; justify-content: space-between; gap: 8px; }
+      .hero-stats > div { flex: 1; }
+      .hero-stat-num { font-size: 1.6rem; }
+      .hero-stat-label { font-size: 0.5rem; letter-spacing: 0.03em; }
+      .cta-banner-actions { flex-direction: column; align-items: stretch; width: 100%; }
+      .cta-banner-actions .btn-primary,
+      .cta-banner-actions .btn-outline { width: 100%; text-align: center; white-space: nowrap; }
     }
   </style>
 </head>
@@ -1254,7 +1266,7 @@
         <div class="hero-eyebrow">
           <span>Estate Planning</span>
         </div>
-        <h1>Protecting Your<br /><em>Legacy</em> &amp;<br />Your Family</h1>
+        <h1>Protecting Your <br /><em>Legacy</em> &amp; <br />Your Family</h1>
         <p class="hero-desc">
           Thoughtful, personalized estate planning designed to give you peace of mind.
           Wills, trusts, and powers of attorney tailored to your life and your wishes.
